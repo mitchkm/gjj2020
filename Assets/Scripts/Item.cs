@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item
+public class Item : MonoBehaviour
 {
 
+    [SerializeField]
     private string name;
 
     public string Name {
@@ -12,5 +13,7 @@ public class Item
             return name;
         }
     }
+
+    public ItemSO so;
 
 }

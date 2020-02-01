@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
 
-    private List<Item> inventory = new List<Item> ();
+    public List<ItemSO> inventory = new List<ItemSO> ();
 
     void Start()
     {
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter (Collider collider) {
         if (collider.gameObject.tag == "Item") {
             itemCount++;
-            inventory.Add (collider.gameObject.GetComponent<Item> ());
+            inventory.Add (collider.gameObject.GetComponent<Item> ().so);
             GameObject.Destroy (collider.gameObject);
         }
     }

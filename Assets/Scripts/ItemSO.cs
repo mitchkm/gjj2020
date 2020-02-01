@@ -8,6 +8,4 @@ public class ItemSO : ScriptableObject
 
     public string name;
 
-    
-
 }
