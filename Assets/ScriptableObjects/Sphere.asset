@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Sphere
   m_EditorClassIdentifier: 
   name: Sphere
+  description: This is a sphere.

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 // This script moves the character controller forward
 // and sideways based on the arrow keys.
@@ -21,6 +22,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
 
     public List<ItemSO> inventory = new List<ItemSO> ();
+
+    public GameObject interactionWindow;
+
+    public InteractionButton button;
+    
+    public 
 
     void Start()
     {
@@ -54,9 +61,19 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter (Collider collider) {
         if (collider.gameObject.tag == "Item") {
-            itemCount++;
-            inventory.Add (collider.gameObject.GetComponent<Item> ().so);
-            GameObject.Destroy (collider.gameObject);
+            //itemCount++;
+            //inventory.Add (collider.gameObject.GetComponent<Item> ().so);
+            //GameObject.Destroy (collider.gameObject);
+            interactionWindow.SetActive (true);
+            button.SetAction (() => {inventory.Add (collider.gameObject.GetComponent<Item> ().so); 
+                                     interactionWindow.SetActive (false); 
+                                     GameObject.Destroy (collider.gameObject); 
+                                     itemCount++; });
         }
     }
+
+    void OnTriggerExit (Collider collider) {
+        interactionWindow.SetActive (false);
+    }
+
 }
