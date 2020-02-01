@@ -25,9 +25,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject interactionWindow;
 
-    public InteractionButton button;
-    
-    public 
+    public InteractionButton button; 
 
     void Start()
     {
