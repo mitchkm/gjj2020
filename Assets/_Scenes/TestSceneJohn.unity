@@ -390,7 +390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab21ed84e131a644aa8f41ddc8598d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Sphere
   so: {fileID: 11400000, guid: 9672f0c271ac6124c97881069cade8ec, type: 2}
 --- !u!1 &871280636
 GameObject:
@@ -753,7 +752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab21ed84e131a644aa8f41ddc8598d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Cube
   so: {fileID: 11400000, guid: 4e285bf6fcc79c34b8cdc3be89ad8c50, type: 2}
 --- !u!1 &1328960108
 GameObject:
