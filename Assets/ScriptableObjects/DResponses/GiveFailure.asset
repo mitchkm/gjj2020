@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GiveFailure
+  m_EditorClassIdentifier: Assembly-CSharp::DResponse
+  responses:
+  - What would I do with this?
+  - Why would I want this?
+  - Are you sure this isn't meant for someone else?
+  - I have no need for that.
+  - Thanks, but no thanks.
+  - Er... no thanks.
+  - But... why though?

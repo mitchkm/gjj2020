@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: AskItemQuest
+  m_EditorClassIdentifier: Assembly-CSharp::DResponse
+  responses:
+  - I'll give it to you, but I want you to do something for me first. Find some {0}
+    for me, and it's yours.
+  - Sure, but it'll cost you. Bring me {0} and I will help you.
+  - If you find some {0} for me, I'll give you what you want.
