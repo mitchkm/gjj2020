@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using System;
+using System.Linq;
 
 // This script moves the character controller forward
 // and sideways based on the arrow keys.
@@ -33,7 +35,9 @@ public class PlayerController : MonoBehaviour
 
     public TMP_Dropdown selectAction;
 
-    public TMP_Dropdown selectItem;
+    public TMP_Dropdown selectItemOrCharacter;
+
+    public GameObject dropDownPanel;
 
     void Start()
     {
@@ -93,13 +97,22 @@ public class PlayerController : MonoBehaviour
         NPC npc = collider.gameObject.GetComponent<NPC> ();
         messageDisplay.ClearMessageList ();
 
-        string s = npc.DoDialougeAction (new DialougeAction (DialougeAction.Action.Greet));
+        string s = npc.DoDialogueAction (new DialogueAction (DialogueAction.Action.Greet));
         messageDisplay.AddMessage (s);
         StartCoroutine (messageDisplay.DisplayMessage ());
+        dropDownPanel.SetActive (true);
+        selectAction.ClearOptions ();
+        selectAction.AddOptions (Enum.GetNames (typeof (DialogueAction.Action)).ToList ());
+        OnActionDropdownChanged ();
+    }
+
+    public void OnActionDropdownChanged () {
+
     }
 
     void OnTriggerExit (Collider collider) {
         interactionWindow.SetActive (false);
+        dropDownPanel.SetActive (false);
     }
 
 }

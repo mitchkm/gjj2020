@@ -20,7 +20,7 @@ public class NPC : MonoBehaviour
         
     }
 
-    public string DoDialougeAction (DialougeAction da) {
+    public string DoDialogueAction (DialogueAction da) {
         for (int i = 0; i < quests.Count; i++) { // Hits the first matching quest found
             if (quests [i].CheckDialougeAction (da)) {
                 return quests [i].GetResponse ();

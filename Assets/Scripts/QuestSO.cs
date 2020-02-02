@@ -8,7 +8,7 @@ public class QuestSO : ScriptableObject
 {
 
     [SerializeField]
-    private DialougeAction action;
+    private DialogueAction action;
 
     [SerializeField]
     private List<string> response = new List<string> ();
@@ -32,7 +32,7 @@ public class QuestSO : ScriptableObject
         return "No Dialouge";
     }
 
-    public bool CheckDialougeAction (DialougeAction da) {
+    public bool CheckDialougeAction (DialogueAction da) {
         return action.Equals (da);
     }
 
