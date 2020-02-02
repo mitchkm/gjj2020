@@ -23,21 +23,29 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 moveDirection = Vector3.zero;
 
-    public List<ItemSO> inventory = new List<ItemSO> ();
+    [SerializeField]
+    private  List<ItemSO> inventory = new List<ItemSO> ();
 
-    public GameObject interactionWindow;
+    [SerializeField]
+    private GameObject interactionWindow;
 
-    public InteractionButton button; 
+    [SerializeField]
+    private InteractionButton button; 
 
-    public TMP_Text message;
+    [SerializeField]
+    private TMP_Text message;
 
-    public MessageDisplay messageDisplay;
+    [SerializeField]
+    private MessageDisplay messageDisplay;
 
-    public TMP_Dropdown selectAction;
+    [SerializeField]
+    private TMP_Dropdown selectAction;
 
-    public TMP_Dropdown selectItemOrCharacter;
+    [SerializeField]
+    private TMP_Dropdown selectItemOrCharacter;
 
-    public GameObject dropDownPanel;
+    [SerializeField]
+    private GameObject dropDownPanel;
 
     void Start()
     {
@@ -80,30 +88,28 @@ public class PlayerController : MonoBehaviour
     private void ItemInteraction (Collider collider) {
         interactionWindow.SetActive (true);
         ItemSO i = collider.gameObject.GetComponent<Item> ().so;
-        // message.text = i.description;
         messageDisplay.ClearMessageList ();
         messageDisplay.AddMessage (i.description);
         StartCoroutine (messageDisplay.DisplayMessage ());
         button.gameObject.SetActive (true);
-        button.SetAction (() => {inventory.Add (i); 
-                                    interactionWindow.SetActive (false);
-                                    button.gameObject.SetActive (false);
-                                    GameObject.Destroy (collider.gameObject);
-                                    itemCount++; });
+        button.SetAction (() => {AddToInventory (i);
+                                 interactionWindow.SetActive (false);
+                                 button.gameObject.SetActive (false);
+                                 GameObject.Destroy (collider.gameObject); });
     }
 
     private void NPCInteraction (Collider collider) {
-        interactionWindow.SetActive (true);
-        NPC npc = collider.gameObject.GetComponent<NPC> ();
-        messageDisplay.ClearMessageList ();
+        // interactionWindow.SetActive (true);
+        // NPC npc = collider.gameObject.GetComponent<NPC> ();
+        // messageDisplay.ClearMessageList ();
 
-        string s = npc.DoDialogueAction (new DialogueAction (DialogueAction.Action.Greet));
-        messageDisplay.AddMessage (s);
-        StartCoroutine (messageDisplay.DisplayMessage ());
-        dropDownPanel.SetActive (true);
-        selectAction.ClearOptions ();
-        selectAction.AddOptions (Enum.GetNames (typeof (DialogueAction.Action)).ToList ());
-        OnActionDropdownChanged ();
+        // string s = npc.DoDialogueAction (new DialogueAction (DialogueAction.Action.Greet));
+        // messageDisplay.AddMessage (s);
+        // StartCoroutine (messageDisplay.DisplayMessage ());
+        // dropDownPanel.SetActive (true);
+        // selectAction.ClearOptions ();
+        // selectAction.AddOptions (Enum.GetNames (typeof (DialogueAction.Action)).ToList ());
+        // OnActionDropdownChanged ();
     }
 
     public void OnActionDropdownChanged () {
@@ -113,6 +119,11 @@ public class PlayerController : MonoBehaviour
     void OnTriggerExit (Collider collider) {
         interactionWindow.SetActive (false);
         dropDownPanel.SetActive (false);
+    }
+
+    public void AddToInventory (ItemSO i) {
+        inventory.Add (i);
+        itemCount++;
     }
 
 }
