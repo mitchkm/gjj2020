@@ -11,7 +11,7 @@ public class DARPSO : ScriptableObject
     private DAction action = null;
 
     [SerializeField]
-    private DResponse response = null;
+    private DResponseSO response = null;
 
     [SerializeField]
     private CharacterList redirect = CharacterList.None;

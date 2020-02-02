@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [CreateAssetMenu(fileName = "DResponse", menuName = "DResponse", order = 6)]
-public class DResponse : ScriptableObject
+public class DResponseSO : ScriptableObject
 {
     [SerializeField]
     private List<string> responses = new List<string> ();

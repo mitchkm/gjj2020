@@ -12,9 +12,9 @@ public class NPC : MonoBehaviour
     private List<DARPSO> responses = new List<DARPSO>();
 
     [SerializeField]
-    private DResponse giveFailure;
+    private DResponseSO giveFailure;
     [SerializeField]
-    private DResponse askFailure;
+    private DResponseSO askFailure;
 
     // Start is called before the first frame update
     void Start()
