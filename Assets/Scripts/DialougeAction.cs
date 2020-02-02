@@ -26,10 +26,16 @@ public class DialougeAction
             return false;
         }
         
-        DialougeAction ap = (DialougeAction) obj;
+        DialougeAction da = (DialougeAction) obj;
+        Debug.Log (da);
+        return verb == da.verb && ((item == null && da.item == null) || item.Equals (da.item)) && character == da.character;
 
-        return verb == ap.verb && item.Equals (ap.item) && character == ap.character;
+    }
 
+    public DialougeAction (Action verb = Action.Greet, ItemSO item = null, CharacterList character = CharacterList.None) {
+        this.verb = verb;
+        this.item = item;
+        this.character = character;
     }
 
 }

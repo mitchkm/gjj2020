@@ -20,17 +20,20 @@ public class QuestSO : ScriptableObject
     private CharacterList redirect;
 
     [SerializeField]
-    private bool useReward = true;
+    private bool useRedirect = true;
 
     public string GetResponse () {
+        if (reward == null) {
+            useRedirect = true;
+        }
         if (response.Count > 0) {
-            return String.Format(response [0], useReward ? reward.itemName : redirect.ToString ());
+            return String.Format(response [0], useRedirect ? redirect.ToString () : reward.itemName);
         }
         return "No Dialouge";
     }
 
-    public bool CheckActionPair (DialougeAction ap) {
-        return action.Equals (ap);
+    public bool CheckDialougeAction (DialougeAction da) {
+        return action.Equals (da);
     }
 
 }

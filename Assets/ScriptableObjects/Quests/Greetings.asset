@@ -10,10 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73322f3aee889ad479723e29c4dfa4b5, type: 3}
-  m_Name: Greet
+  m_Name: Greetings
   m_EditorClassIdentifier: 
   action:
-    verb: 0
+    verb: 2
     item: {fileID: 0}
     character: 0
-  response: []
+  response:
+  - '"Oh, it''s you."'
+  - '"Hi there!"'
+  - '"What do you want?"'
+  - '"What now?"'
+  - '"Yes?"'
+  - '"Make it quick."'
+  reward: {fileID: 0}
+  redirect: 0
+  useReward: 1

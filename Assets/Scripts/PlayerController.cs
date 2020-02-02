@@ -31,6 +31,10 @@ public class PlayerController : MonoBehaviour
 
     public MessageDisplay messageDisplay;
 
+    public TMP_Dropdown selectAction;
+
+    public TMP_Dropdown selectItem;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -63,20 +67,35 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter (Collider collider) {
         if (collider.gameObject.tag == "Item") {
-            //itemCount++;
-            //inventory.Add (collider.gameObject.GetComponent<Item> ().so);
-            //GameObject.Destroy (collider.gameObject);
-            interactionWindow.SetActive (true);
-            ItemSO i = collider.gameObject.GetComponent<Item> ().so;
-            // message.text = i.description;
-            messageDisplay.ClearMessageList ();
-            messageDisplay.AddMessage (i.description);
-            StartCoroutine (messageDisplay.DisplayMessage ());
-            button.SetAction (() => {inventory.Add (i); 
-                                     interactionWindow.SetActive (false); 
-                                     GameObject.Destroy (collider.gameObject);
-                                     itemCount++; });
+            ItemInteraction (collider);
+        } else if (collider.gameObject.tag == "NPC") {
+            NPCInteraction (collider);
         }
+    }
+
+    private void ItemInteraction (Collider collider) {
+        interactionWindow.SetActive (true);
+        ItemSO i = collider.gameObject.GetComponent<Item> ().so;
+        // message.text = i.description;
+        messageDisplay.ClearMessageList ();
+        messageDisplay.AddMessage (i.description);
+        StartCoroutine (messageDisplay.DisplayMessage ());
+        button.gameObject.SetActive (true);
+        button.SetAction (() => {inventory.Add (i); 
+                                    interactionWindow.SetActive (false);
+                                    button.gameObject.SetActive (false);
+                                    GameObject.Destroy (collider.gameObject);
+                                    itemCount++; });
+    }
+
+    private void NPCInteraction (Collider collider) {
+        interactionWindow.SetActive (true);
+        NPC npc = collider.gameObject.GetComponent<NPC> ();
+        messageDisplay.ClearMessageList ();
+
+        string s = npc.DoDialougeAction (new DialougeAction (DialougeAction.Action.Greet));
+        messageDisplay.AddMessage (s);
+        StartCoroutine (messageDisplay.DisplayMessage ());
     }
 
     void OnTriggerExit (Collider collider) {

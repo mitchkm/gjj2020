@@ -47,7 +47,10 @@ public class MessageDisplay : MonoBehaviour
             }
             toDisplay.RemoveAt (0);
         } else {
-            textDisplay.text = "";
+            if (toDisplay.Count > 0) {
+                textDisplay.text = "";
+                StartCoroutine (DisplayMessage ());
+            }
         }
     }
 
