@@ -10,10 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c52a8291761045549a3d06a287e05fc2, type: 3}
-  m_Name: AskItemQuest
-  m_EditorClassIdentifier: Assembly-CSharp::DResponse
+  m_Name: QuestPear
+  m_EditorClassIdentifier: 
   responses:
-  - I'll give it to you, but I want you to do something for me first. Find some {0}
-    for me, and it's yours.
-  - Sure, but it'll cost you. Bring me {0} and I will help you.
-  - If you find some {0} for me, I'll give you what you want.
+  - I must have some Pears! Bring me some and I'll reward you.

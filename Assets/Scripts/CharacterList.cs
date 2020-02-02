@@ -9,5 +9,8 @@ public enum CharacterList
     Mitch,
     Kevin,
     Megan,
-    Steve
+    Addison,
+    Gabriella,
+    Lucas,
+    Luther
 }
