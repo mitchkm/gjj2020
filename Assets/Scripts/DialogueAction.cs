@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [System.Serializable]
-public class DialougeAction 
+public class DialogueAction 
 {
     public enum Action {
         Give,
@@ -22,17 +22,17 @@ public class DialougeAction
     public CharacterList character;
 
     public override bool Equals (object obj) {
-        if (obj == null || !(obj is DialougeAction)) {
+        if (obj == null || !(obj is DialogueAction)) {
             return false;
         }
         
-        DialougeAction da = (DialougeAction) obj;
+        DialogueAction da = (DialogueAction) obj;
         Debug.Log (da);
         return verb == da.verb && ((item == null && da.item == null) || item.Equals (da.item)) && character == da.character;
 
     }
 
-    public DialougeAction (Action verb = Action.Greet, ItemSO item = null, CharacterList character = CharacterList.None) {
+    public DialogueAction (Action verb = Action.Greet, ItemSO item = null, CharacterList character = CharacterList.None) {
         this.verb = verb;
         this.item = item;
         this.character = character;
