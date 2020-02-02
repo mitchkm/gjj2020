@@ -17,6 +17,6 @@ public class DResponse : ScriptableObject
         if (responses.Count > 0) {
             return String.Format(responses [0], replacement);
         }
-        return "No Dialouge";
+        return "No Dialogue";
     }
 }

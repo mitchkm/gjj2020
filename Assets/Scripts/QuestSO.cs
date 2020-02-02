@@ -8,32 +8,38 @@ public class QuestSO : ScriptableObject
 {
 
     [SerializeField]
-    private DialogueAction action = null;
-
-    [SerializeField]
-    private List<string> response = new List<string> ();
-
-    [SerializeField]
     private ItemSO reward = null;
 
-    [SerializeField]
-    private CharacterList redirect = CharacterList.None;
+    private bool started = false;
+    private int numAttempts = 0;
 
     [SerializeField]
-    private bool useRedirect = true;
+    private DARPSO redeem; // Redeem quest
+    [SerializeField]
+    private DARPSO redeemUnexpected; // Unexpectedly redeem quest
+    [SerializeField]
+    private DARPSO[] give; // Give quest
 
-    public string GetResponse () {
-        if (reward == null) {
-            useRedirect = true;
+    public string DoAction(DAction playerAction, PlayerController player) {
+        numAttempts %= give.Length;
+        if (started && redeem.IsTriggered(playerAction)) {
+            this.GiveReward(player);
+            return redeem.GetResponse(reward.ToString());
+        } else if (redeemUnexpected.IsTriggered(playerAction)) {
+            this.GiveReward(player);
+            return redeemUnexpected.GetResponse(reward.ToString());
+        } else if (give[numAttempts].IsTriggered(playerAction)) {
+            if (!started) {
+                started = true;
+                // Teach player about this item / person / whatever
+            }
+            return give[numAttempts++].GetResponse(reward.ToString());
+        } else {
+            return null;
         }
-        if (response.Count > 0) {
-            return String.Format(response [0], useRedirect ? redirect.ToString () : reward.itemName);
-        }
-        return "No Dialouge";
     }
 
-    public bool CheckDialougeAction (DialogueAction da) {
-        return action.Equals (da);
+    private void GiveReward(PlayerController player) {
+        // TODO: Give player the thing
     }
-
 }

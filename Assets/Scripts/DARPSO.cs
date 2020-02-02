@@ -17,10 +17,14 @@ public class DARPSO : ScriptableObject
     private CharacterList redirect = CharacterList.None;
 
     public string GetResponse () {
+        return this.GetResponse(redirect.ToString ());
+    }
+
+    public string GetResponse(string replacement) {
         if (response == null) {
             return "No Dialogue";
         }
-        return response.GetResponse(redirect.ToString ());
+        return response.GetResponse(replacement);
     }
 
     public bool IsTriggered (DAction da) {

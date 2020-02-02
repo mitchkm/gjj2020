@@ -28,8 +28,7 @@ public class DAction
         
         DAction da = (DAction) obj;
         Debug.Log (da);
-        return verb == da.verb && ((item == null && da.item == null) || item.Equals (da.item)) && character == da.character;
-
+        return verb == da.verb && ((item != null && item.Equals(da.item)) || (item == null && da.item == null)) && character == da.character;
     }
 
     public DAction (Action verb = Action.Greet, ItemSO item = null, CharacterList character = CharacterList.None) {
