@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-
+    [SerializeField]
+    private PlayerController player;
     [SerializeField]
     private List<QuestSO> quests = new List<QuestSO> ();
+    [SerializeField]
+    private List<DARPSO> responses = new List<DARPSO>();
+
+    [SerializeField]
+    private DResponse giveFailure;
+    [SerializeField]
+    private DResponse askFailure;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +28,28 @@ public class NPC : MonoBehaviour
         
     }
 
-    public string DoDialogueAction (DialogueAction da) {
-        for (int i = 0; i < quests.Count; i++) { // Hits the first matching quest found
-            if (quests [i].CheckDialougeAction (da)) {
-                return quests [i].GetResponse ();
+    string Interact(DAction playerAction) {
+        string reply;
+        foreach (QuestSO quest in quests) {
+            reply = quest.DoAction(playerAction, player);
+            if (reply != null) return reply;
+        }
+        foreach (DARPSO response in responses) {
+            if (response.IsTriggered(playerAction)) {
+                return response.GetResponse();
             }
         }
-        return "No dialouge found.";
+        switch (playerAction.verb) {
+            case DAction.Action.Ask:
+                if (askFailure) return askFailure.GetResponse();
+                break;
+            case DAction.Action.Give:
+                if (giveFailure) return giveFailure.GetResponse();
+                break;
+            default:
+                return "听不懂";
+        }
+        return "Something has gone wrong. Get out now before it's too late.";
     }
 
 }

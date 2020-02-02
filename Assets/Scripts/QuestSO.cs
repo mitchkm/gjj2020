@@ -11,6 +11,7 @@ public class QuestSO : ScriptableObject
     private ItemSO reward = null;
 
     private bool started = false;
+    private bool completed = false;
     private int numAttempts = 0;
 
     [SerializeField]
@@ -20,8 +21,15 @@ public class QuestSO : ScriptableObject
     [SerializeField]
     private DARPSO[] give; // Give quest
 
+    public bool IsCompleted() {
+        return completed;
+    }
+
     public string DoAction(DAction playerAction, PlayerController player) {
         numAttempts %= give.Length;
+        if (completed) {
+            return null;
+        }
         if (started && redeem.IsTriggered(playerAction)) {
             this.GiveReward(player);
             return redeem.GetResponse(reward.ToString());
@@ -40,6 +48,7 @@ public class QuestSO : ScriptableObject
     }
 
     private void GiveReward(PlayerController player) {
-        // TODO: Give player the thing
+        completed = true;
+        player.AddToInventory(reward);
     }
 }
