@@ -10,10 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c52a8291761045549a3d06a287e05fc2, type: 3}
-  m_Name: RewardUnexpected
-  m_EditorClassIdentifier: Assembly-CSharp::DResponse
+  m_Name: GiveQuestPearDialogue
+  m_EditorClassIdentifier: 
   responses:
-  - Just what I needed! Here, have some {0} - hope it can help you!
-  - "Thanks!\tHelp yourself to some {0} as a reward."
-  - That's perfect! Take this {0} as a token of my gratitude.
-  - Many thanks! Take this {0} as a reward!
+  - I must have some Pears! Bring me some and I'll reward you.

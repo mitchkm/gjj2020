@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9397276526ec06642a1462a8d4125b0f, type: 3}
+  m_Name: GiveQuestBook
+  m_EditorClassIdentifier: 
+  action:
+    verb: 1
+    item: {fileID: 11400000, guid: e4b85518e29141548ba4d3701d5e072d, type: 2}
+    character: 0
+  response: {fileID: 11400000, guid: c373681ee1ed9854ba04ef76890f11ff, type: 2}
+  redirect: 0

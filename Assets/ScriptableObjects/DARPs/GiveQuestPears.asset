@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9397276526ec06642a1462a8d4125b0f, type: 3}
+  m_Name: GiveQuestPears
+  m_EditorClassIdentifier: 
+  action:
+    verb: 1
+    item: {fileID: 11400000, guid: 53d8f8c33607e6e4fae70ae884a51a87, type: 2}
+    character: 0
+  response: {fileID: 11400000, guid: 5fa2cba099202324f9c7ba20f14152c5, type: 2}
+  redirect: 0

@@ -10,10 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c52a8291761045549a3d06a287e05fc2, type: 3}
-  m_Name: AskInfoFailure
-  m_EditorClassIdentifier: Assembly-CSharp::DResponseSO
+  m_Name: GiveQuestChairDialogue
+  m_EditorClassIdentifier: 
   responses:
-  - Sorry, I don't know.
-  - I'm not sure, sorry.
-  - I wouldn't know anything about that.
-  - You'll have to ask someone else.
+  - I need an extra Chair. Please get one for me.

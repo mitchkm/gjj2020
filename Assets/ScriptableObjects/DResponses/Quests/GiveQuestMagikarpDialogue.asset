@@ -10,13 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c52a8291761045549a3d06a287e05fc2, type: 3}
-  m_Name: GiveFailure
-  m_EditorClassIdentifier: Assembly-CSharp::DResponse
+  m_Name: GiveQuestMagikarpDialogue
+  m_EditorClassIdentifier: 
   responses:
-  - What would I do with this?
-  - Why would I want this?
-  - Are you sure this isn't meant for someone else?
-  - I have no need for that.
-  - Thanks, but no thanks.
-  - Er... no thanks.
-  - But... why though?
+  - My pet Magikarp has gone missing!

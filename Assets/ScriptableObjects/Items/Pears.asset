@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52a8291761045549a3d06a287e05fc2, type: 3}
-  m_Name: Greeting
+  m_Script: {fileID: 11500000, guid: 537c624a67f19b1439697eaea5e1ca1a, type: 3}
+  m_Name: Pears
   m_EditorClassIdentifier: 
-  responses:
-  - Oh, it's you.
-  - Hi there!
-  - What do you want?
-  - What now?
-  - Yes?
-  - Make it quick.
+  itemName: Pears
+  description: Tasty.

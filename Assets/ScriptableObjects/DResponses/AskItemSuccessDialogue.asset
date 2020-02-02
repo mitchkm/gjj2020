@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c52a8291761045549a3d06a287e05fc2, type: 3}
-  m_Name: RewardExpected
+  m_Name: AskItemSuccessDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DResponse
   responses:
-  - Just what I needed! Your {0}, as promised.
-  - Thanks! Here is your {0}.
-  - That's great! I hope this {0} helps!
-  - Many thanks! Here, the {0} you asked for.
+  - Sure, here you go.
+  - Oh, here then.
+  - Ah, of course. There you go.

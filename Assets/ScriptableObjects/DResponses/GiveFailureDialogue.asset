@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c52a8291761045549a3d06a287e05fc2, type: 3}
-  m_Name: AskItemFailure
+  m_Name: GiveFailureDialogue
   m_EditorClassIdentifier: Assembly-CSharp::DResponse
   responses:
-  - Sorry, I don't have that.
-  - I'd like to help, but I don't have that.
-  - Sorry, youi'll have to look somewhere else.
+  - What would I do with this?
+  - Why would I want this?
+  - Are you sure this isn't meant for someone else?
+  - I have no need for that.
+  - Thanks, but no thanks.
+  - Er... no thanks.
+  - But... why though?

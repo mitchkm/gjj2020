@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9397276526ec06642a1462a8d4125b0f, type: 3}
+  m_Name: RedeemExpectedMagikarp
+  m_EditorClassIdentifier: 
+  action:
+    verb: 0
+    item: {fileID: 11400000, guid: c9fe5b8d25f6365428519b431a6df55d, type: 2}
+    character: 0
+  response: {fileID: 11400000, guid: fea4771831db032479a4fd390b008006, type: 2}
+  redirect: 0
