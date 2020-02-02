@@ -16,6 +16,9 @@ public class NPC : MonoBehaviour
     [SerializeField]
     private DResponseSO askFailure;
 
+    [SerializeField]
+    private DResponseSO greetings;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,7 @@ public class NPC : MonoBehaviour
         
     }
 
-    string Interact(DAction playerAction) {
+    public string Interact(DAction playerAction) {
         string reply;
         foreach (QuestSO quest in quests) {
             reply = quest.DoAction(playerAction, player);
@@ -45,6 +48,9 @@ public class NPC : MonoBehaviour
                 break;
             case DAction.Action.Give:
                 if (giveFailure) return giveFailure.GetResponse();
+                break;
+            case DAction.Action.Greet:
+                if (greetings) return greetings.GetResponse();
                 break;
             default:
                 return "听不懂";

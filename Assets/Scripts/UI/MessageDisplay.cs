@@ -15,6 +15,9 @@ public class MessageDisplay : MonoBehaviour
     [SerializeField]
     private float textSpeed = .1f;
 
+    [SerializeField]
+    private InteractionPopup interactionPopup;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +38,8 @@ public class MessageDisplay : MonoBehaviour
             textDisplay.text += letter;
             yield return new WaitForSeconds (textSpeed);
         }
-        Debug.Log ("test");
+        // Debug.Log ("test");
+        interactionPopup.ChangeState (InteractionPopup.State.PlayerChoices1);
         toDisplay.RemoveAt (0);
 
     }

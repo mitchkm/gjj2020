@@ -31,4 +31,10 @@ public class DARPSO : ScriptableObject
         return action != null && action.Equals (da);
     }
 
+    public ItemSO RequiredItem {
+        get {
+            return action.item;
+        }
+    }
+
 }

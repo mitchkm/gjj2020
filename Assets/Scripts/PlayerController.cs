@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using System;
 using System.Linq;
+using UnityEngine.UI;
 
 // This script moves the character controller forward
 // and sideways based on the arrow keys.
@@ -24,28 +25,63 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
 
     [SerializeField]
-    private  List<ItemSO> inventory = new List<ItemSO> ();
+    private List<ItemSO> inventory = new List<ItemSO> ();
+
+    public List<ItemSO> Invetory {
+        get {
+            return inventory;
+        }
+    }
+
+    private NPC currentNPC;
+
+    // [SerializeField]
+    // private GameObject interactionWindow;
+
+    // [SerializeField]
+    // private InteractionButton button; 
+
+    // [SerializeField]
+    // private TMP_Text message;
+
+    // [SerializeField]
+    // private MessageDisplay messageDisplay;
+
+    // [SerializeField]
+    // private TMP_Dropdown selectAction;
+
+    // [SerializeField]
+    // private TMP_Dropdown selectItemOrCharacter;
+
+    // [SerializeField]
+    // private GameObject dropDownPanel;
 
     [SerializeField]
-    private GameObject interactionWindow;
+    private InteractionPopup interactionPopup;
 
-    [SerializeField]
-    private InteractionButton button; 
+    private List<ItemSO> knownItems = new List<ItemSO> ();
 
-    [SerializeField]
-    private TMP_Text message;
+    public List<ItemSO> KnownItems {
+        get {
+            return knownItems;
+        }
+    }
 
-    [SerializeField]
-    private MessageDisplay messageDisplay;
+    // private List<GameObject> knownCharacters = new List<GameObject> ();
 
-    [SerializeField]
-    private TMP_Dropdown selectAction;
+    // public List<GameObject> KnownCharacters {
+    //     get {
+    //         return knownCharacters;
+    //     }
+    // }
 
-    [SerializeField]
-    private TMP_Dropdown selectItemOrCharacter;
+    // private List<GameObject> metCharacters = new List<GameObject> ();
 
-    [SerializeField]
-    private GameObject dropDownPanel;
+    // public List<GameObject> MetCharacters {
+    //     get {
+    //         return metCharacters;
+    //     }
+    // }
 
     void Start()
     {
@@ -86,19 +122,22 @@ public class PlayerController : MonoBehaviour
     }
 
     private void ItemInteraction (Collider collider) {
-        interactionWindow.SetActive (true);
-        ItemSO i = collider.gameObject.GetComponent<Item> ().so;
-        messageDisplay.ClearMessageList ();
-        messageDisplay.AddMessage (i.description);
-        StartCoroutine (messageDisplay.DisplayMessage ());
-        button.gameObject.SetActive (true);
-        button.SetAction (() => {AddToInventory (i);
-                                 interactionWindow.SetActive (false);
-                                 button.gameObject.SetActive (false);
-                                 GameObject.Destroy (collider.gameObject); });
+        // interactionWindow.SetActive (true);
+        // ItemSO i = collider.gameObject.GetComponent<Item> ().so;
+        // messageDisplay.ClearMessageList ();
+        // messageDisplay.AddMessage (i.description);
+        // StartCoroutine (messageDisplay.DisplayMessage ());
+        // button.gameObject.SetActive (true);
+        // button.SetAction (() => {AddToInventory (i);
+        //                          interactionWindow.SetActive (false);
+        //                          button.gameObject.SetActive (false);
+        //                          GameObject.Destroy (collider.gameObject); });
+        interactionPopup.ChangeState (InteractionPopup.State.ItemPickup, collider.GetComponent <Item> ());
     }
 
     private void NPCInteraction (Collider collider) {
+        currentNPC = collider.gameObject.GetComponent<NPC> ();
+        interactionPopup.ChangeState (InteractionPopup.State.DisplayMessage, null, currentNPC.Interact (new DAction ()));
         // interactionWindow.SetActive (true);
         // NPC npc = collider.gameObject.GetComponent<NPC> ();
         // messageDisplay.ClearMessageList ();
@@ -117,13 +156,28 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnTriggerExit (Collider collider) {
-        interactionWindow.SetActive (false);
-        dropDownPanel.SetActive (false);
+        // interactionWindow.SetActive (false);
+        // dropDownPanel.SetActive (false);
+        interactionPopup.ChangeState (InteractionPopup.State.Hidden);
     }
 
     public void AddToInventory (ItemSO i) {
         inventory.Add (i);
         itemCount++;
     }
+
+    public void AddToKnown (ItemSO i) {
+        knownItems.Add (i);
+    }
+
+    // public GameObject ConvertItemToImage (ItemSO item) {
+    //     GameObject go = new GameObject ();
+    //     go.AddComponent<Image> ();
+    //     Image i = go.GetComponent<Image> ();
+    //     Sprite s = Resources.Load<Sprite> ("Sprites/Items/" + item.itemName); // Might need + ".png"
+    //     i.sprite = s;
+
+    //     return go;
+    // }
 
 }

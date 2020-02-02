@@ -40,6 +40,7 @@ public class QuestSO : ScriptableObject
             if (!started) {
                 started = true;
                 // Teach player about this item / person / whatever
+                player.AddToKnown (redeem.RequiredItem);
             }
             return give[numAttempts++].GetResponse(reward.ToString());
         } else {
