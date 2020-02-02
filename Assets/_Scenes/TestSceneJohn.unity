@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 80839045}
   - component: {fileID: 80839047}
   - component: {fileID: 80839046}
+  - component: {fileID: 80839048}
   m_Layer: 5
   m_Name: Message
   m_TagString: Untagged
@@ -276,6 +277,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 80839044}
   m_CullTransparentMesh: 0
+--- !u!114 &80839048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80839044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18e8b6fe6a6264147ad81e87a3c4fa00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDisplay: {fileID: 80839046}
+  textSpeed: 0.02
 --- !u!43 &123767358
 Mesh:
   m_ObjectHideFlags: 0
@@ -1273,6 +1288,9 @@ MonoBehaviour:
   itemCount: 0
   inventory: []
   interactionWindow: {fileID: 1009443367}
+  button: {fileID: 210354914}
+  message: {fileID: 80839046}
+  messageDisplay: {fileID: 80839048}
 --- !u!1 &1327870383
 GameObject:
   m_ObjectHideFlags: 0

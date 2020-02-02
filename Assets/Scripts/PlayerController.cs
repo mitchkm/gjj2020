@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
 
     public InteractionButton button; 
 
+    public TMP_Text message;
+
+    public MessageDisplay messageDisplay;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -63,9 +67,14 @@ public class PlayerController : MonoBehaviour
             //inventory.Add (collider.gameObject.GetComponent<Item> ().so);
             //GameObject.Destroy (collider.gameObject);
             interactionWindow.SetActive (true);
-            button.SetAction (() => {inventory.Add (collider.gameObject.GetComponent<Item> ().so); 
+            ItemSO i = collider.gameObject.GetComponent<Item> ().so;
+            // message.text = i.description;
+            messageDisplay.ClearMessageList ();
+            messageDisplay.AddMessage (i.description);
+            StartCoroutine (messageDisplay.DisplayMessage ());
+            button.SetAction (() => {inventory.Add (i); 
                                      interactionWindow.SetActive (false); 
-                                     GameObject.Destroy (collider.gameObject); 
+                                     GameObject.Destroy (collider.gameObject);
                                      itemCount++; });
         }
     }
