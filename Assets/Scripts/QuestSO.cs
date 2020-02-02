@@ -8,16 +8,16 @@ public class QuestSO : ScriptableObject
 {
 
     [SerializeField]
-    private DialogueAction action;
+    private DialogueAction action = null;
 
     [SerializeField]
     private List<string> response = new List<string> ();
 
     [SerializeField]
-    private ItemSO reward;
+    private ItemSO reward = null;
 
     [SerializeField]
-    private CharacterList redirect;
+    private CharacterList redirect = CharacterList.None;
 
     [SerializeField]
     private bool useRedirect = true;

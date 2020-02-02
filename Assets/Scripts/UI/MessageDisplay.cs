@@ -10,10 +10,10 @@ public class MessageDisplay : MonoBehaviour
     private List<string> toDisplay = new List<string> ();
 
     [SerializeField]
-    private TMP_Text textDisplay;
+    private TMP_Text textDisplay = null;
 
     [SerializeField]
-    private float textSpeed;
+    private float textSpeed = .1f;
 
     // Start is called before the first frame update
     void Start()
