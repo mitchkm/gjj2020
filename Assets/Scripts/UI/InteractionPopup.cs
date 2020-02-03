@@ -85,6 +85,7 @@ public class InteractionPopup : MonoBehaviour
         button.gameObject.SetActive (false);
         askOptions.gameObject.SetActive (false);
         selectOptions.gameObject.SetActive (false);
+        GetRidOfButtons ();
     }
 
     private void ShowMessage (string message) {

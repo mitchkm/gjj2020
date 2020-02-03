@@ -6,6 +6,8 @@ using System;
 [CreateAssetMenu(fileName = "DResponse", menuName = "DResponse", order = 6)]
 public class DResponseSO : ScriptableObject
 {
+    private static System.Random r = new System.Random ();
+
     [SerializeField]
     private List<string> responses = new List<string> ();
 
@@ -15,7 +17,7 @@ public class DResponseSO : ScriptableObject
 
     public string GetResponse (string replacement) {
         if (responses.Count > 0) {
-            return String.Format(responses [0], replacement);
+            return String.Format(responses [r.Next (0, responses.Count)], replacement);
         }
         return "No Dialogue";
     }
