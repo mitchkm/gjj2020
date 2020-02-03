@@ -25,4 +25,8 @@ public class ItemSO : ScriptableObject
 
     }
 
+    public override string ToString () {
+        return itemName;
+    } 
+
 }
