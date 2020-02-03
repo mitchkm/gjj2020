@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Cloth
   description: Catches the wind.
+  sprite: {fileID: 21300000, guid: 34b6b3f3e343fcf4eb14013c08abed0c, type: 3}

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wood
   description: Useful for fixing boats.
+  sprite: {fileID: 21300000, guid: 38a218aa66b957149b21f3d3168b43a0, type: 3}

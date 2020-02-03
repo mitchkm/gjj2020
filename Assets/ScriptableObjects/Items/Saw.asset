@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Saw
   description: Cuts things.
+  sprite: {fileID: 21300000, guid: 0a42208ab7974194a9d5ae5c1caa9306, type: 3}

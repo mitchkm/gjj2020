@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Hammer
   description: Hits things.
+  sprite: {fileID: 21300000, guid: 65a1297aff80e414aa3b643035918e8d, type: 3}
