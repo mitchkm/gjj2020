@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Island
-  m_Shader: {fileID: -6465566751694194690, guid: 58f77a5b5b5fdf0439bb3d7045541cbc,
+  m_Shader: {fileID: -6465566751694194690, guid: 083d37bf70610e043a0935fbe736a55f,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -25,19 +25,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture1:
-        m_Texture: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
+        m_Texture: {fileID: 2800000, guid: 87ce03bd447ccce48bbff87ac0d8355f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture2:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: bafadcf258df85b4686863cbaa688fba, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3f893818068c13c498261af150bea6f3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture4:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c6ed0c6463040474c886353259dafc29, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -166,7 +166,7 @@ Material:
     - _DstBlend: 0
     - _EnableHeightBlend: 0
     - _EnableInstancedPerPixelNormal: 1
-    - _Gloss: 0.5
+    - _Gloss: 0.2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossinessSource: 0
