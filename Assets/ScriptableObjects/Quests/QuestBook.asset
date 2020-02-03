@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73322f3aee889ad479723e29c4dfa4b5, type: 3}
+  m_Name: QuestBook
+  m_EditorClassIdentifier: 
+  reward: {fileID: 11400000, guid: 13a851b7fd54f584eb7f89d45e4741d5, type: 2}
+  redeem: {fileID: 11400000, guid: cde8c768bd5b4c94c8d9638ebc3d7c1d, type: 2}
+  redeemUnexpected: {fileID: 11400000, guid: 733b4561b91c722469cf5120ec0f7057, type: 2}
+  give:
+  - {fileID: 11400000, guid: fcef52c6bc9b555408de56da2d3b5745, type: 2}
+  - {fileID: 11400000, guid: 235689023ad646c42b34970737e69d7e, type: 2}

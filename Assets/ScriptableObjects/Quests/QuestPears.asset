@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73322f3aee889ad479723e29c4dfa4b5, type: 3}
+  m_Name: QuestPears
+  m_EditorClassIdentifier: 
+  reward: {fileID: 11400000, guid: 53d8f8c33607e6e4fae70ae884a51a87, type: 2}
+  redeem: {fileID: 11400000, guid: 1f80c8d1e31174a49a01072e3f2db698, type: 2}
+  redeemUnexpected: {fileID: 11400000, guid: 5ed00e8578d20894cb6c39b16b87a1ab, type: 2}
+  give:
+  - {fileID: 11400000, guid: f23516c3173b9d2468b4445e34ac7edf, type: 2}
+  - {fileID: 11400000, guid: bf6a25fffb9765c489f0dcda59e9d019, type: 2}
