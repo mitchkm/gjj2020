@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private List<ItemSO> inventory = new List<ItemSO> ();
 
-    public List<ItemSO> Invetory {
+    public List<ItemSO> Inventory {
         get {
             return inventory;
         }
@@ -168,6 +168,20 @@ public class PlayerController : MonoBehaviour
 
     public void AddToKnown (ItemSO i) {
         knownItems.Add (i);
+    }
+
+    public List<GameObject> GenerateButtons (List<ItemSO> items, DAction.Action action) {
+        List<GameObject> gameObjects = new List<GameObject> ();
+        foreach (ItemSO item in items) {
+            GameObject go = new GameObject();
+            go.AddComponent<Button> ();
+            Button b = go.GetComponent<Button> ();
+            Sprite s = item.sprite;
+            b.image.sprite = s;
+            b.onClick.AddListener (() => interactionPopup.ChangeState (InteractionPopup.State.DisplayMessage, null, currentNPC.Interact (new DAction (action, item))));
+            gameObjects.Add (go);
+        }
+        return gameObjects;
     }
 
     // public GameObject ConvertItemToImage (ItemSO item) {

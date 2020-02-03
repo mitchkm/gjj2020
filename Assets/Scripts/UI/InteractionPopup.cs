@@ -35,6 +35,9 @@ public class InteractionPopup : MonoBehaviour
     [SerializeField]
     private AskOptions askOptions;
 
+    [SerializeField]
+    private Transform selectOptions;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +84,7 @@ public class InteractionPopup : MonoBehaviour
         gameObject.SetActive (false);
         button.gameObject.SetActive (false);
         askOptions.gameObject.SetActive (false);
+        selectOptions.gameObject.SetActive (false);
     }
 
     private void ShowMessage (string message) {
@@ -99,7 +103,8 @@ public class InteractionPopup : MonoBehaviour
         button.transform.GetChild (0).GetComponent<TMPro.TMP_Text> ().text = "Pick up " + item.so.itemName;
         button.SetAction (() => {player.AddToInventory (item.so);
                                  button.gameObject.SetActive (false);
-                                 GameObject.Destroy (item.gameObject); });
+                                 GameObject.Destroy (item.gameObject); 
+                                 ChangeState (State.Hidden); });
     }
 
     private void DisplayPrimaryChoices () {
@@ -107,7 +112,27 @@ public class InteractionPopup : MonoBehaviour
     }
 
     private void DisplaySecondaryChoices (DAction.Action action) {
-        
+        Debug.Log ("choices2");
+        askOptions.gameObject.SetActive (false);
+        selectOptions.gameObject.SetActive (true);
+        List<GameObject> buttons;
+        if (action == DAction.Action.Ask) {
+            buttons = player.GenerateButtons (player.KnownItems, action);
+        } else {
+            buttons = player.GenerateButtons (player.Inventory, action);
+        }
+
+        float availableSize = 600f / buttons.Count;
+        float buttonWidth = availableSize * (2f/3f);
+
+        float pos = 0;
+        for (int i = 0; i < buttons.Count; i++) {
+            buttons [i].transform.SetParent (selectOptions);
+            ((RectTransform)buttons [i].transform).sizeDelta = new Vector2 (buttonWidth, buttonWidth);
+            pos = -600 + i * availableSize + 0.5f * availableSize;
+            buttons [i].transform.position = new Vector3 (pos, 0, 0);
+        }
+
     }
 
 }

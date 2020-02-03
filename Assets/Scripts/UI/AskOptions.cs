@@ -28,10 +28,12 @@ public class AskOptions : MonoBehaviour
     }
 
     public void GiveItemAction () {
+        Debug.Log ("Give");
         interactionPopup.ChangeState (InteractionPopup.State.PlayerChoices2, null, "", DAction.Action.Give);
     }
 
     public void AskItemAction () {
+        Debug.Log ("Ask");
         interactionPopup.ChangeState (InteractionPopup.State.PlayerChoices2, null, "", DAction.Action.Ask);
     }
 
