@@ -31,7 +31,7 @@ public class NPC : MonoBehaviour
         
     }
 
-    public string Interact(DAction playerAction) {
+    public virtual string Interact(DAction playerAction) {
         string reply;
         foreach (QuestSO quest in quests) {
             reply = quest.DoAction(playerAction, player);
@@ -58,4 +58,10 @@ public class NPC : MonoBehaviour
         return "Something has gone wrong. Get out now before it's too late.";
     }
 
+    public bool AllQuestsCompleted() {
+        foreach (QuestSO quest in quests) {
+            if (!quest.IsCompleted()) return false;
+        }
+        return true;
+    }
 }
