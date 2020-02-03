@@ -18,6 +18,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-8626129240980948473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Master.bank
+  SubDir: 
+  lastModified: 637162466404916188
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-8484235934882743540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,6 +52,42 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &-8295366250054985932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Luther's Mountain.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Luther's Mountain.bank
+  SubDir: 
+  lastModified: 637162466404846053
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-7959897299348420016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Spoopy.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Spoopy.bank
+  SubDir: 
+  lastModified: 637162466405454423
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &-7888997667974148018
 MonoBehaviour:
@@ -50,17 +104,18 @@ MonoBehaviour:
   Path: event:/InVillage
   guid: c6834a1335d7304daf73f04d873ba641
   Banks:
-  - {fileID: 327191924678799074}
+  - {fileID: -6177100106635489213}
+  - {fileID: 3178089571256706937}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 686747104423017545}
-  - {fileID: -4177775558735952793}
+  - {fileID: 7590769780151803907}
+  - {fileID: -7627395589059263771}
   MinDistance: 1
   MaxDistance: 20
   Length: 43417
---- !u!114 &-4177775558735952793
+--- !u!114 &-7627395589059263771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,6 +132,59 @@ MonoBehaviour:
   Max: 11
   Default: 0
   Exists: 1
+--- !u!114 &-6177100106635489213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/VillageRoaming.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/VillageRoaming.bank
+  SubDir: 
+  lastModified: 637162466406711059
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5188915223378750736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Luther's Mountain.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/Luther's Mountain.bank
+  SubDir: 
+  lastModified: 637162578443109081
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-4177775558735952793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InVillage/Outer Village
+  m_EditorClassIdentifier: 
+  Name: Outer Village
+  Min: 0
+  Max: 11
+  Default: 0
+  Exists: 0
 --- !u!114 &-4022106971858747678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +200,8 @@ MonoBehaviour:
   Path: event:/SpoopyPlace
   guid: 934214bb56890a4f9104a0e463c724e9
   Banks:
-  - {fileID: 9088698135565801162}
+  - {fileID: -7959897299348420016}
+  - {fileID: -2238014706887012037}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -117,7 +226,7 @@ MonoBehaviour:
   lastModified: 637162466404916188
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3375082921940420502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +242,8 @@ MonoBehaviour:
   Path: event:/Village Char 1
   guid: 462259b6a92a2d4496277dc432209a5c
   Banks:
-  - {fileID: 327191924678799074}
+  - {fileID: -6177100106635489213}
+  - {fileID: 3178089571256706937}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -141,6 +251,41 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1980
+--- !u!114 &-2713151501370080592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InVillage/Outer Village
+  m_EditorClassIdentifier: 
+  Name: Outer Village
+  Min: 0
+  Max: 11
+  Default: 0
+  Exists: 0
+--- !u!114 &-2238014706887012037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Spoopy.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/Spoopy.bank
+  SubDir: 
+  lastModified: 637162578444575571
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1172923238169078447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +304,43 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-733732122200859752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InVillage/Inner Village
+  m_EditorClassIdentifier: 
+  Name: Inner Village
+  Min: 0
+  Max: 11
+  Default: 0
+  Exists: 0
+--- !u!114 &-301140315297603224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637162578443168923
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1486
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,11 +354,15 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2208668912600150073}
-  - {fileID: 8133163867876013492}
-  - {fileID: -3548491393390710929}
-  - {fileID: 9088698135565801162}
-  - {fileID: 327191924678799074}
+  - {fileID: -301140315297603224}
+  - {fileID: -8295366250054985932}
+  - {fileID: -8626129240980948473}
+  - {fileID: -7959897299348420016}
+  - {fileID: -6177100106635489213}
+  - {fileID: -5188915223378750736}
+  - {fileID: 4975312408132643873}
+  - {fileID: -2238014706887012037}
+  - {fileID: 3178089571256706937}
   EditorEvents:
   - {fileID: 7908904166986027862}
   - {fileID: 535434903772111122}
@@ -191,10 +377,11 @@ MonoBehaviour:
   - {fileID: 8292348848559179217}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -3548491393390710929}
+  - {fileID: -8626129240980948473}
+  - {fileID: 4975312408132643873}
   StringsBanks:
-  - {fileID: 2208668912600150073}
-  stringsBankWriteTime: 637162466404965723
+  - {fileID: -301140315297603224}
+  stringsBankWriteTime: 637162578443168923
   cacheVersion: 3
 --- !u!114 &327191924678799074
 MonoBehaviour:
@@ -213,7 +400,7 @@ MonoBehaviour:
   lastModified: 637162466406711059
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &535434903772111122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +416,8 @@ MonoBehaviour:
   Path: event:/Luther Char 3
   guid: 78f774c883dc5447b39aa70d42d2866b
   Banks:
-  - {fileID: 8133163867876013492}
+  - {fileID: -8295366250054985932}
+  - {fileID: -5188915223378750736}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -253,7 +441,7 @@ MonoBehaviour:
   Min: 0
   Max: 11
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &701763652997023287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +493,8 @@ MonoBehaviour:
   Path: event:/Luther Char 2
   guid: c9e3a05be009d54b9d7b6ddd0d2d5015
   Banks:
-  - {fileID: 8133163867876013492}
+  - {fileID: -8295366250054985932}
+  - {fileID: -5188915223378750736}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -332,6 +521,23 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1486
+  Exists: 0
+--- !u!114 &2279221282333781130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Road to Luther/Early Luther
+  m_EditorClassIdentifier: 
+  Name: Early Luther
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
 --- !u!114 &3093113496603906188
 MonoBehaviour:
@@ -351,6 +557,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3178089571256706937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/VillageRoaming.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/VillageRoaming.bank
+  SubDir: 
+  lastModified: 637162578451410101
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3211769872049433685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +626,8 @@ MonoBehaviour:
   Path: event:/Village Char 0
   guid: aaa8e1033a5b2c429f280a52538ec093
   Banks:
-  - {fileID: 327191924678799074}
+  - {fileID: -6177100106635489213}
+  - {fileID: 3178089571256706937}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -425,15 +650,34 @@ MonoBehaviour:
   Path: event:/Road to Luther
   guid: bfd4b8243ba489418a9ae82d3b822263
   Banks:
-  - {fileID: 8133163867876013492}
+  - {fileID: -8295366250054985932}
+  - {fileID: -5188915223378750736}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: -8484235934882743540}
+  - {fileID: 2279221282333781130}
   MinDistance: 1
   MaxDistance: 20
   Length: 72007
+--- !u!114 &4975312408132643873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637162578443148978
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5942611771826774829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +712,23 @@ MonoBehaviour:
   Max: 11
   Default: 0
   Exists: 0
+--- !u!114 &7590769780151803907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InVillage/Inner Village
+  m_EditorClassIdentifier: 
+  Name: Inner Village
+  Min: 0
+  Max: 11
+  Default: 0
+  Exists: 1
 --- !u!114 &7785275330167672062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,7 +744,8 @@ MonoBehaviour:
   Path: event:/Village Char 2
   guid: 25d2cf4eb17e02419f15f086538e26dd
   Banks:
-  - {fileID: 327191924678799074}
+  - {fileID: -6177100106635489213}
+  - {fileID: 3178089571256706937}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -506,7 +768,8 @@ MonoBehaviour:
   Path: event:/Luther Char 0
   guid: 047c8b8b743c454d98372b22b8473283
   Banks:
-  - {fileID: 8133163867876013492}
+  - {fileID: -8295366250054985932}
+  - {fileID: -5188915223378750736}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -532,7 +795,7 @@ MonoBehaviour:
   lastModified: 637162466404846053
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8292348848559179217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,7 +811,8 @@ MonoBehaviour:
   Path: event:/Village Char 3
   guid: de75add53488c045bd9958fa67e3e911
   Banks:
-  - {fileID: 327191924678799074}
+  - {fileID: -6177100106635489213}
+  - {fileID: 3178089571256706937}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -571,7 +835,8 @@ MonoBehaviour:
   Path: event:/Luther Char 1
   guid: 905688395d5e4d46ab24267e3524d05b
   Banks:
-  - {fileID: 8133163867876013492}
+  - {fileID: -8295366250054985932}
+  - {fileID: -5188915223378750736}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -579,6 +844,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4988
+--- !u!114 &8574407915607181220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Road to Luther/Early Luther
+  m_EditorClassIdentifier: 
+  Name: Early Luther
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &9088698135565801162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,4 +878,4 @@ MonoBehaviour:
   lastModified: 637162466405454423
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0

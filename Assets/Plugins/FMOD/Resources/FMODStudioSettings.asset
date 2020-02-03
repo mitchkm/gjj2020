@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
+  HasSourceProject: 0
+  HasPlatforms: 0
   sourceProjectPath: ../../../Users/redwo/Documents/FMOD Studio/GGJ2020/GGJ2020.fspro
-  sourceBankPath: ..\..\..\Users\redwo\Documents\FMOD Studio\GGJ2020\Build
+  sourceBankPath: Assets\StreamingAssets
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -76,7 +76,15 @@ MonoBehaviour:
   - Platform: 20
     Value: 32
   Plugins: []
-  MasterBanks: []
-  Banks: []
+  MasterBanks:
+  - Master
+  - Master
+  Banks:
+  - Luther's Mountain
+  - Luther's Mountain
+  - Spoopy
+  - Spoopy
+  - VillageRoaming
+  - VillageRoaming
   BanksToLoad: []
   LiveUpdatePort: 9264
