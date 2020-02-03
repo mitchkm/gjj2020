@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73322f3aee889ad479723e29c4dfa4b5, type: 3}
-  m_Name: QuestMagikarp
+  m_Name: QuestWrench
   m_EditorClassIdentifier: 
   reward: {fileID: 11400000, guid: e4b85518e29141548ba4d3701d5e072d, type: 2}
-  redeem: {fileID: 11400000, guid: 23b738e66b682b04290a75e1c1962357, type: 2}
-  redeemUnexpected: {fileID: 11400000, guid: 5ef5e4373b75f9f4e9b29327cd3fa73b, type: 2}
+  redeem: {fileID: 11400000, guid: 0f4dfe2064ca7a34188ad33077b94977, type: 2}
+  redeemUnexpected: {fileID: 11400000, guid: 66db920a0986d5a4ba54cf2e940daeb2, type: 2}
   give:
-  - {fileID: 11400000, guid: 539a628111b665543942ec1bcdd26821, type: 2}
+  - {fileID: 11400000, guid: efded4b1611f72640a0ab45a63dd315f, type: 2}
   - {fileID: 11400000, guid: 06f8bd63d5722ea449c2f0bdc5caa44c, type: 2}

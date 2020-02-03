@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73322f3aee889ad479723e29c4dfa4b5, type: 3}
+  m_Name: QuestFries
+  m_EditorClassIdentifier: 
+  reward: {fileID: 11400000, guid: abca967d041cbac449a12757ed5bea9a, type: 2}
+  redeem: {fileID: 11400000, guid: e804d7a13fdd0584e88fb19b351dca77, type: 2}
+  redeemUnexpected: {fileID: 11400000, guid: 9cab4d292b5c1bf4a8dbc4779941256a, type: 2}
+  give:
+  - {fileID: 11400000, guid: 65596fbce12731b40a787482105a3cbb, type: 2}
+  - {fileID: 11400000, guid: bc775c21c7b567a4a93ef9f1177c33ff, type: 2}
