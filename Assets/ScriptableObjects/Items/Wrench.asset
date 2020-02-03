@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wrench
   description: For repairing things.
+  sprite: {fileID: 21300000, guid: f0eec86127469b343b3bc34adf91e461, type: 3}

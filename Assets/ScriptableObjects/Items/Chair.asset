@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Chair
   description: This would be very inappropriate if it were underwater.
+  sprite: {fileID: 21300000, guid: c1f428316ff847248833cd8280a1a630, type: 3}

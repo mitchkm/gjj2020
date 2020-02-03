@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Pears
   description: Tasty.
+  sprite: {fileID: 21300000, guid: 6cf210c2e17e98842a8af70039dd3755, type: 3}

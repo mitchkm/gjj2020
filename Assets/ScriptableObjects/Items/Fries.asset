@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Fries
   description: Fresh from McDonald's
+  sprite: {fileID: 21300000, guid: aed5ba2bd2364ae4ab4d8549593adbee, type: 3}
