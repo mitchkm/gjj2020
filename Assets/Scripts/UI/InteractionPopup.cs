@@ -89,6 +89,7 @@ public class InteractionPopup : MonoBehaviour
 
     private void ShowMessage (string message) {
         gameObject.SetActive (true);
+        selectOptions.gameObject.SetActive (false);
         messageDisplay.ClearMessageList ();
         messageDisplay.AddMessage (message);
         messageDisplay.StartCoroutine (messageDisplay.DisplayMessage ());
@@ -124,15 +125,24 @@ public class InteractionPopup : MonoBehaviour
 
         float availableSize = 600f / buttons.Count;
         float buttonWidth = availableSize * (2f/3f);
+        if (buttonWidth > 50) {
+            buttonWidth = 50;
+        }
 
         float pos = 0;
         for (int i = 0; i < buttons.Count; i++) {
             buttons [i].transform.SetParent (selectOptions);
             ((RectTransform)buttons [i].transform).sizeDelta = new Vector2 (buttonWidth, buttonWidth);
-            pos = -600 + i * availableSize + 0.5f * availableSize;
-            buttons [i].transform.position = new Vector3 (pos, 0, 0);
+            pos = -300 + (i * availableSize) + (0.5f * availableSize);
+            buttons [i].transform.localPosition = new Vector3 (pos, 0, 0);
         }
 
+    }
+
+    public void GetRidOfButtons () {
+        foreach (Transform t in selectOptions) {
+            GameObject.Destroy (t.gameObject);
+        }
     }
 
 }

@@ -163,6 +163,9 @@ public class PlayerController : MonoBehaviour
 
     public void AddToInventory (ItemSO i) {
         inventory.Add (i);
+        if (!knownItems.Contains (i)) {
+            knownItems.Add (i);
+        }
         itemCount++;
     }
 
@@ -175,10 +178,14 @@ public class PlayerController : MonoBehaviour
         foreach (ItemSO item in items) {
             GameObject go = new GameObject();
             go.AddComponent<Button> ();
+            go.AddComponent<Image> ();
             Button b = go.GetComponent<Button> ();
+            Image i = go.GetComponent<Image> ();
             Sprite s = item.sprite;
-            b.image.sprite = s;
-            b.onClick.AddListener (() => interactionPopup.ChangeState (InteractionPopup.State.DisplayMessage, null, currentNPC.Interact (new DAction (action, item))));
+            i.sprite = s;
+            b.targetGraphic = i;
+            b.onClick.AddListener (() => {interactionPopup.ChangeState (InteractionPopup.State.DisplayMessage, null, currentNPC.Interact (new DAction (action, item)));
+                                          interactionPopup.GetRidOfButtons (); });
             gameObjects.Add (go);
         }
         return gameObjects;

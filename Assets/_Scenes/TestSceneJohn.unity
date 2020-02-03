@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab21ed84e131a644aa8f41ddc8598d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 9672f0c271ac6124c97881069cade8ec, type: 2}
+  so: {fileID: 11400000, guid: 3c9852d0957a7f34192bfdd24980fa13, type: 2}
 --- !u!1 &255270975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,7 +2750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2066657155386859178}
-  quests: []
+  quests:
+  - {fileID: 11400000, guid: 66e06a01664761a4f87aac8754e3f20e, type: 2}
   responses: []
   giveFailure: {fileID: 11400000, guid: 63e387462b6423c409f81919e4fed49d, type: 2}
   askFailure: {fileID: 11400000, guid: 05a9f95371802ba44bb79fb6829a9ea5, type: 2}
@@ -3062,7 +3063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1009443368
 RectTransform:
   m_ObjectHideFlags: 0

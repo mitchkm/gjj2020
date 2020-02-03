@@ -32,9 +32,11 @@ public class QuestSO : ScriptableObject
         }
         if (started && redeem.IsTriggered(playerAction)) {
             this.GiveReward(player);
+            player.Inventory.Remove (playerAction.item);
             return redeem.GetResponse(reward.ToString());
         } else if (redeemUnexpected.IsTriggered(playerAction)) {
             this.GiveReward(player);
+            player.Inventory.Remove (playerAction.item);
             return redeemUnexpected.GetResponse(reward.ToString());
         } else if (give[numAttempts].IsTriggered(playerAction)) {
             if (!started) {
